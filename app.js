@@ -16,6 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 import testApis from "./apis/testApis.js";
+import urlApis from "./apis/urlApis.js";
 
 //app  and middleware
 const app = express();

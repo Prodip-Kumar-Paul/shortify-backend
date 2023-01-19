@@ -1,9 +1,10 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+const { Schema } = mongoose;
 
-const urlSchema = new mongoose.Schema(
+const urlSchema = new Schema(
   {
-    
-    urlCode: { type: String, default: null },
+
+    urlCode: { type: String, required: true, unique: true },
     longUrl: { type: String, required: true },
     shortUrl: { type: String, default: null },
     date: { type: String, default: Date.now },
@@ -11,4 +12,4 @@ const urlSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Url", urlSchema);
+export default mongoose.model("Url", urlSchema);
