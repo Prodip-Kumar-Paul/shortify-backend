@@ -71,6 +71,8 @@ app.use(limiter);
 
 
 app.use("/api/v1/test", testApis);
+app.use("/api/v1/url", urlApis);
+
 
 // ERROR HANDLING MIDDLEWARE
 app.use(globalErrorHandler);
