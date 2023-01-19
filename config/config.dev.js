@@ -14,6 +14,7 @@ const configDev = {
   DB_NAME: process.env.DEV_DB_NAME,
   DB_URL: process.env.DEV_DB_URL,
   DB_PASSWORD: process.env.DEV_DB_PASSWORD,
+  BASE_URL: process.env.BASE_URL
 };
 
 export default configDev;

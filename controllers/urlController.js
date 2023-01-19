@@ -27,7 +27,7 @@ export const createShortUrl = async (req, res, next) => {
       //  const urlCode = `${name}-${time}`;
       const urlCode = nanoid();
 
-      const shortUrl = baseUrl + "/forU/" + urlCode;
+      const shortUrl = baseUrl + "/forU?urlCode=" + urlCode;
       const newUrl = new Url({
          urlCode,
          longUrl: link,
