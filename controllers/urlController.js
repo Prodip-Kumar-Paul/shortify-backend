@@ -5,7 +5,6 @@ import config from "../config/config.js"
 export const createShortUrl = async (req, res, next) => {
    try {
       const { link } = req.body;
-      //console.log(link);
       const baseUrl = config.BASE_URL;
 
       // Check base url

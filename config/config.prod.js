@@ -14,7 +14,7 @@ const configProd = {
    DB_NAME: process.env.PROD_DB_NAME,
    DB_URL: process.env.PROD_DB_URL,
    DB_PASSWORD: process.env.PROD_DB_PASSWORD,
-   BASE_URL: process.env.BASE_URL
+   BASE_URL: process.env.PROD_BASE_URL,
 };
 
 export default configProd;
