@@ -68,6 +68,7 @@ export const getShortUrl = async (req, res, next) => {
          data: foundUrl,
          status: true,
       });
+      //res.redirect(301, foundUrl);
    } catch (err) {
       console.log(err);
       res.status(500).json({

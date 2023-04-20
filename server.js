@@ -16,14 +16,19 @@ const DB = config.DB_URL.replace("<password>", config.DB_PASSWORD);
 // DB connection
 
 const options = {
+   //* SQL databases ------ */
    // autoIndex: false, // Don't build indexes
-   maxPoolSize: 10, // Maintain up to 10 socket connections
-   serverSelectionTimeoutMS: 10000, // Keep trying to send operations for 5 seconds
+   // maxPoolSize: 10, // Maintain up to 10 socket connections
+   // serverSelectionTimeoutMS: 10000, // Keep trying to send operations for 5 seconds
    // socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
    // family: 4, // Use IPv4, skip trying IPv6
+
+   //* NoSql databases -------- */
    useUnifiedTopology: true,
    useNewUrlParser: true,
 };
+mongoose.set('strictQuery', true);
+
 mongoose
    .connect(DB, options)
    .then(() => {
